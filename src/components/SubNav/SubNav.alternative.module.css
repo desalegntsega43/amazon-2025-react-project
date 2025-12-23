@@ -1,0 +1,114 @@
+/**
+ * ALTERNATIVE APPROACH: Pure CSS Horizontal Scroll
+ * Simpler, mobile-friendly, no JavaScript required
+ */
+
+.subNav {
+  background-color: #232f3e;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #555 #232f3e; /* Firefox */
+}
+
+/* Custom scrollbar for Webkit browsers */
+.subNav::-webkit-scrollbar {
+  height: 6px;
+}
+
+.subNav::-webkit-scrollbar-track {
+  background: #232f3e;
+}
+
+.subNav::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 3px;
+}
+
+.subNav::-webkit-scrollbar-thumb:hover {
+  background: #777;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding: 0 1rem;
+  min-width: min-content;
+}
+
+.menuItem {
+  color: white;
+  text-decoration: none;
+  padding: 0.95rem 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+  transition: background-color 0.2s;
+  border-radius: 2px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+.menuItem:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.menuItem:first-child {
+  font-weight: 600;
+}
+
+/* Fade effect on edges */
+.subNav::before,
+.subNav::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 30px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.subNav::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(35, 47, 62, 1), transparent);
+}
+
+.subNav::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(35, 47, 62, 1), transparent);
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .menu {
+    padding: 0 0.5rem;
+  }
+
+  .menuItem {
+    padding: 0.6rem 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  /* Hide scrollbar on mobile for cleaner look */
+  .subNav {
+    scrollbar-width: none;
+  }
+
+  .subNav::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Snap scrolling for better UX (optional) */
+@media (hover: none) and (pointer: coarse) {
+  .subNav {
+    scroll-snap-type: x proximity;
+  }
+
+  .menuItem {
+    scroll-snap-align: start;
+  }
+}

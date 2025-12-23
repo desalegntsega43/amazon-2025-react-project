@@ -1,0 +1,83 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+    
+    function isAdmin() {
+      return isAuthenticated() && 
+             request.auth.token.admin == true;
+    }
+    
+    // Users collection - users can only access their own data
+    match /users/{userId} {
+      allow read, write: if isOwner(userId);
+      
+      // User orders subcollection
+      match /orders/{orderId} {
+        allow read: if isOwner(userId);
+        allow create: if isOwner(userId) && 
+                      request.resource.data.userId == userId &&
+                      request.resource.data.amount is number &&
+                      request.resource.data.created is number;
+        allow update: if isOwner(userId);
+        allow delete: if isOwner(userId) || isAdmin();
+      }
+      
+      // User cart subcollection
+      match /cart/{itemId} {
+        allow read, write: if isOwner(userId);
+      }
+      
+      // User profile
+      match /profile/{document=**} {
+        allow read, write: if isOwner(userId);
+      }
+    }
+    
+    // Products collection - public read, admin write
+    match /products/{productId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+    
+    // Categories collection - public read, admin write
+    match /categories/{categoryId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+    
+    // Reviews collection
+    match /reviews/{reviewId} {
+      allow read: if true;
+      allow create: if isAuthenticated() &&
+                    request.resource.data.userId == request.auth.uid;
+      allow update, delete: if isAuthenticated() &&
+                             resource.data.userId == request.auth.uid;
+    }
+    
+    // Admin collections - admin only
+    match /admin/{document=**} {
+      allow read, write: if isAdmin();
+    }
+    
+    // Analytics collection - write only for authenticated users
+    match /analytics/{document=**} {
+      allow read: if isAdmin();
+      allow write: if isAuthenticated();
+    }
+    
+    // Test collection - for development/testing only
+    // Remove this in production!
+    match /test/{document=**} {
+      allow read, write: if true;
+    }
+  }
+}

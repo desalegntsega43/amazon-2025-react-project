@@ -1,0 +1,103 @@
+.subNav {
+  background-color: #1a3d64;
+  position: fixed;
+  top: 60px; /* Height of main header */
+  left: 0;
+  right: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  height: 39px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive positioning */
+@media (max-width: 1024px) {
+  .subNav {
+    top: 55px; /* Adjusted header height */
+  }
+}
+
+@media (max-width: 768px) {
+  .subNav {
+    top: 50px; /* Adjusted header height */
+  }
+}
+
+.menuContainer {
+  flex: 1;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.menuContainer::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding: 0 0.5rem;
+  white-space: nowrap;
+  height: 100%;
+}
+
+.menuItem {
+  color: white;
+  text-decoration: none;
+  padding: 0 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: border-color 0.2s;
+  white-space: nowrap;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  border: 1px solid transparent;
+}
+
+.menuItem:hover {
+  border-color: white;
+}
+
+.allMenu {
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0 1rem;
+}
+
+.menuIcon {
+  font-size: 1.5rem;
+}
+
+/* Mobile-friendly touch scroll */
+@media (max-width: 768px) {
+  .menuContainer {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .menu {
+    padding: 0 0.5rem;
+  }
+
+  .menuItem {
+    padding: 0 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  .allMenu {
+    padding: 0 0.6rem;
+  }
+
+  .menuIcon {
+    font-size: 1.3rem;
+  }
+}

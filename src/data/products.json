@@ -1,0 +1,302 @@
+[
+  {
+    "id": 1,
+    "name": "Wireless Bluetooth Headphones",
+    "price": 49.99,
+    "rating": 4.5,
+    "reviews": 1234,
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+    "category": "Electronics",
+    "description": "Premium wireless headphones with noise cancellation and 30-hour battery life."
+  },
+  {
+    "id": 2,
+    "name": "Smart Watch Series 5",
+    "price": 299.99,
+    "rating": 4.7,
+    "reviews": 892,
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500",
+    "category": "Electronics",
+    "description": "Advanced fitness tracking, heart rate monitor, and smartphone notifications."
+  },
+  {
+    "id": 3,
+    "name": "Laptop Backpack",
+    "price": 39.99,
+    "rating": 4.3,
+    "reviews": 567,
+    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500",
+    "category": "Accessories",
+    "description": "Durable water-resistant backpack with padded laptop compartment."
+  },
+  {
+    "id": 4,
+    "name": "4K Ultra HD Camera",
+    "price": 599.99,
+    "rating": 4.8,
+    "reviews": 2341,
+    "image": "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=500",
+    "category": "Electronics",
+    "description": "Professional mirrorless camera with 4K video and advanced autofocus."
+  },
+  {
+    "id": 5,
+    "name": "Running Shoes",
+    "price": 89.99,
+    "rating": 4.6,
+    "reviews": 1567,
+    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500",
+    "category": "Sports",
+    "description": "Lightweight running shoes with superior cushioning and breathability."
+  },
+  {
+    "id": 6,
+    "name": "Coffee Maker",
+    "price": 79.99,
+    "rating": 4.4,
+    "reviews": 789,
+    "image": "https://images.unsplash.com/photo-1517668808822-9ebb02f2a0e6?w=500",
+    "category": "Home",
+    "description": "Programmable coffee maker with thermal carafe and auto-brew feature."
+  },
+  {
+    "id": 7,
+    "name": "Yoga Mat",
+    "price": 29.99,
+    "rating": 4.5,
+    "reviews": 432,
+    "image": "https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?w=500",
+    "category": "Sports",
+    "description": "Non-slip eco-friendly yoga mat with extra cushioning."
+  },
+  {
+    "id": 8,
+    "name": "Desk Lamp LED",
+    "price": 34.99,
+    "rating": 4.2,
+    "reviews": 234,
+    "image": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=500",
+    "category": "Home",
+    "description": "Adjustable LED desk lamp with touch control and USB charging port."
+  },
+  {
+    "id": 9,
+    "name": "Mechanical Keyboard",
+    "price": 129.99,
+    "rating": 4.7,
+    "reviews": 1876,
+    "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=500",
+    "category": "Electronics",
+    "description": "RGB mechanical gaming keyboard with customizable keys."
+  },
+  {
+    "id": 10,
+    "name": "Wireless Mouse",
+    "price": 24.99,
+    "rating": 4.4,
+    "reviews": 654,
+    "image": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=500",
+    "category": "Electronics",
+    "description": "Ergonomic wireless mouse with precision tracking."
+  },
+  {
+    "id": 11,
+    "name": "Portable Charger 20000mAh",
+    "price": 35.99,
+    "rating": 4.6,
+    "reviews": 2134,
+    "image": "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=500",
+    "category": "Electronics",
+    "description": "High-capacity power bank with fast charging support."
+  },
+  {
+    "id": 12,
+    "name": "USB-C Hub Adapter",
+    "price": 45.99,
+    "rating": 4.3,
+    "reviews": 987,
+    "image": "https://images.unsplash.com/photo-1625948515291-69613efd103f?w=500",
+    "category": "Electronics",
+    "description": "7-in-1 USB-C hub with HDMI, USB 3.0, and SD card reader."
+  },
+  {
+    "id": 13,
+    "name": "Bluetooth Speaker",
+    "price": 59.99,
+    "rating": 4.5,
+    "reviews": 1432,
+    "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=500",
+    "category": "Electronics",
+    "description": "Waterproof portable speaker with 360° sound."
+  },
+  {
+    "id": 14,
+    "name": "Fitness Tracker Band",
+    "price": 39.99,
+    "rating": 4.2,
+    "reviews": 876,
+    "image": "https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=500",
+    "category": "Sports",
+    "description": "Activity tracker with heart rate and sleep monitoring."
+  },
+  {
+    "id": 15,
+    "name": "Dumbbell Set",
+    "price": 149.99,
+    "rating": 4.8,
+    "reviews": 543,
+    "image": "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=500",
+    "category": "Sports",
+    "description": "Adjustable dumbbell set 5-50 lbs with storage rack."
+  },
+  {
+    "id": 16,
+    "name": "Resistance Bands Set",
+    "price": 19.99,
+    "rating": 4.4,
+    "reviews": 1234,
+    "image": "https://images.unsplash.com/photo-1598289431512-b97b0917affc?w=500",
+    "category": "Sports",
+    "description": "5-piece resistance band set for home workouts."
+  },
+  {
+    "id": 17,
+    "name": "Water Bottle 32oz",
+    "price": 22.99,
+    "rating": 4.6,
+    "reviews": 2341,
+    "image": "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=500",
+    "category": "Sports",
+    "description": "Insulated stainless steel water bottle keeps drinks cold 24hrs."
+  },
+  {
+    "id": 18,
+    "name": "Blender Pro 1000W",
+    "price": 89.99,
+    "rating": 4.7,
+    "reviews": 1567,
+    "image": "https://images.unsplash.com/photo-1585515320310-259814833e62?w=500",
+    "category": "Home",
+    "description": "High-speed blender for smoothies, soups, and more."
+  },
+  {
+    "id": 19,
+    "name": "Air Fryer 5.8QT",
+    "price": 119.99,
+    "rating": 4.8,
+    "reviews": 3421,
+    "image": "https://images.unsplash.com/photo-1585515320310-259814833e62?w=500",
+    "category": "Home",
+    "description": "Digital air fryer with 8 preset cooking functions."
+  },
+  {
+    "id": 20,
+    "name": "Vacuum Cleaner Robot",
+    "price": 249.99,
+    "rating": 4.5,
+    "reviews": 1876,
+    "image": "https://images.unsplash.com/photo-1558317374-067fb5f30001?w=500",
+    "category": "Home",
+    "description": "Smart robot vacuum with app control and auto-charging."
+  },
+  {
+    "id": 21,
+    "name": "Memory Foam Pillow",
+    "price": 34.99,
+    "rating": 4.6,
+    "reviews": 2134,
+    "image": "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?w=500",
+    "category": "Home",
+    "description": "Ergonomic memory foam pillow for neck support."
+  },
+  {
+    "id": 22,
+    "name": "Bed Sheet Set Queen",
+    "price": 44.99,
+    "rating": 4.4,
+    "reviews": 987,
+    "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=500",
+    "category": "Home",
+    "description": "Soft microfiber bed sheet set with deep pockets."
+  },
+  {
+    "id": 23,
+    "name": "Sunglasses Polarized",
+    "price": 29.99,
+    "rating": 4.3,
+    "reviews": 765,
+    "image": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=500",
+    "category": "Accessories",
+    "description": "UV400 protection polarized sunglasses."
+  },
+  {
+    "id": 24,
+    "name": "Leather Wallet",
+    "price": 24.99,
+    "rating": 4.5,
+    "reviews": 1234,
+    "image": "https://images.unsplash.com/photo-1627123424574-724758594e93?w=500",
+    "category": "Accessories",
+    "description": "Genuine leather bifold wallet with RFID blocking."
+  },
+  {
+    "id": 25,
+    "name": "Travel Luggage 28\"",
+    "price": 129.99,
+    "rating": 4.7,
+    "reviews": 876,
+    "image": "https://images.unsplash.com/photo-1565026057447-bc90a3dceb87?w=500",
+    "category": "Accessories",
+    "description": "Hardshell spinner luggage with TSA lock."
+  },
+  {
+    "id": 26,
+    "name": "Phone Case iPhone",
+    "price": 14.99,
+    "rating": 4.2,
+    "reviews": 3421,
+    "image": "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=500",
+    "category": "Accessories",
+    "description": "Shockproof protective phone case with kickstand."
+  },
+  {
+    "id": 27,
+    "name": "Screen Protector Pack",
+    "price": 9.99,
+    "rating": 4.4,
+    "reviews": 2134,
+    "image": "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=500",
+    "category": "Accessories",
+    "description": "Tempered glass screen protector 3-pack."
+  },
+  {
+    "id": 28,
+    "name": "Wireless Earbuds Pro",
+    "price": 79.99,
+    "rating": 4.6,
+    "reviews": 1987,
+    "image": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=500",
+    "category": "Electronics",
+    "description": "True wireless earbuds with active noise cancellation."
+  },
+  {
+    "id": 29,
+    "name": "Gaming Headset RGB",
+    "price": 69.99,
+    "rating": 4.5,
+    "reviews": 1432,
+    "image": "https://images.unsplash.com/photo-1599669454699-248893623440?w=500",
+    "category": "Electronics",
+    "description": "7.1 surround sound gaming headset with mic."
+  },
+  {
+    "id": 30,
+    "name": "Webcam 1080P HD",
+    "price": 54.99,
+    "rating": 4.3,
+    "reviews": 876,
+    "image": "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=500",
+    "category": "Electronics",
+    "description": "Full HD webcam with auto-focus and built-in mic."
+  }
+]

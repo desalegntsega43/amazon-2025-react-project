@@ -1,0 +1,627 @@
+.home {
+  min-height: 100%;
+}
+
+.successBanner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(135deg, #28a745, #20c997);
+  color: white;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  animation: slideDown 0.5s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.successContent {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.successIcon {
+  font-size: 2rem;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.successText {
+  flex: 1;
+}
+
+.successText h3 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.successText p {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.closeButton:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.heroCarousel {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  background-color: #e3e6e6;
+}
+
+.carouselContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.slideContent {
+  position: absolute;
+  left: 3rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #232f3e;
+  z-index: 5;
+  max-width: 500px;
+}
+
+.slideTitle {
+  font-size: 3rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  color: #232f3e;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+.slideSubtitle {
+  font-size: 1.25rem;
+  margin: 0;
+  color: #565959;
+  font-weight: 400;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+.prevButton,
+.nextButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  border: none;
+  font-size: 2rem;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.2s;
+  color: #232f3e;
+}
+
+.prevButton:hover,
+.nextButton:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.prevButton {
+  left: 20px;
+  border-radius: 0 4px 4px 0;
+}
+
+.nextButton {
+  right: 20px;
+  border-radius: 4px 0 0 4px;
+}
+
+.indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.indicator.activeIndicator {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.categoryCardsOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.3) 0%, transparent 100%);
+  z-index: 5;
+}
+
+.categoryCardsGrid {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.categoryBox {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #232f3e;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.categoryBox:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.categoryTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  color: #0f1111;
+}
+
+.categoryImageWrapper {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.categoryImageWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.categoryBox:hover .categoryImageWrapper img {
+  transform: scale(1.05);
+}
+
+.shopNowLink {
+  color: #007185;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-top: auto;
+}
+
+.shopNowLink:hover {
+  color: #c7511f;
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #232f3e;
+}
+
+/* Recommendations Section */
+.recommendations {
+  background-color: white;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.recommendationsCard {
+  background: linear-gradient(to bottom, white, #f7f8f8);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.recommendationsTitle {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #0f1111;
+  margin: 0 0 1.5rem 0;
+}
+
+.signInButton {
+  display: inline-block;
+  padding: 0.625rem 4rem;
+  background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
+  border: 1px solid #a88734;
+  border-radius: 4px;
+  color: #111;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: background 0.2s;
+  margin-bottom: 1rem;
+}
+
+.signInButton:hover {
+  background: linear-gradient(to bottom, #f5d78e, #edb932);
+}
+
+.newCustomer {
+  font-size: 0.875rem;
+  color: #0f1111;
+  margin: 0;
+}
+
+.startLink {
+  color: #007185;
+  text-decoration: none;
+}
+
+.startLink:hover {
+  color: #c7511f;
+  text-decoration: underline;
+}
+
+/* Banner Carousel Section */
+.bannersSection {
+  background-color: white;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.bannerCarousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.bannerSlider {
+  overflow: hidden;
+  width: 100%;
+}
+
+.bannerTrack {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.bannerSlide {
+  min-width: 100%;
+  position: relative;
+  text-decoration: none;
+  height: 400px;
+  display: block;
+}
+
+.bannerImageWrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.bannerImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bannerOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  padding: 2rem;
+  color: white;
+}
+
+.bannerTitle {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+}
+
+.bannerLink {
+  font-size: 1.1rem;
+  color: #ffd814;
+  font-weight: 500;
+}
+
+.bannerPrevButton,
+.bannerNextButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  border: none;
+  font-size: 2rem;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.2s;
+  color: #232f3e;
+}
+
+.bannerPrevButton:hover,
+.bannerNextButton:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.bannerPrevButton {
+  left: 20px;
+  border-radius: 0 4px 4px 0;
+}
+
+.bannerNextButton {
+  right: 20px;
+  border-radius: 4px 0 0 4px;
+}
+
+.bannerIndicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.bannerIndicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.bannerIndicator.activeBannerIndicator {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+/* All Products Section */
+.allProducts {
+  background-color: #f5f5f5;
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 1200px) {
+  .categoryCardsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .heroCarousel {
+    height: 400px;
+  }
+
+  .categoryCardsOverlay {
+    position: static;
+    background: white;
+    padding: 1rem;
+  }
+
+  .categoryCardsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .categoryBox {
+    padding: 1rem;
+  }
+
+  .categoryTitle {
+    font-size: 1rem;
+  }
+
+  .categoryImageWrapper {
+    height: 150px;
+  }
+
+  .prevButton,
+  .nextButton {
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+  }
+
+  .prevButton {
+    left: 10px;
+  }
+
+  .nextButton {
+    right: 10px;
+  }
+
+  .container {
+    padding: 2rem 1rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.5rem;
+  }
+
+  .productGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .bannerSlide {
+    height: 300px;
+  }
+
+  .slideContent {
+    left: 1.5rem;
+    max-width: 300px;
+  }
+
+  .slideTitle {
+    font-size: 2rem;
+  }
+
+  .slideSubtitle {
+    font-size: 1rem;
+  }
+
+  .bannerTitle {
+    font-size: 1.5rem;
+  }
+
+  .bannerLink {
+    font-size: 0.95rem;
+  }
+
+  .bannerPrevButton,
+  .bannerNextButton {
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+  }
+
+  .bannerPrevButton {
+    left: 10px;
+  }
+
+  .bannerNextButton {
+    right: 10px;
+  }
+
+  .recommendationsCard {
+    padding: 1.5rem;
+  }
+
+  .recommendationsTitle {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .productGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .productGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .bannerSlide {
+    height: 250px;
+  }
+
+  .slideContent {
+    left: 1rem;
+    max-width: 250px;
+  }
+
+  .slideTitle {
+    font-size: 1.5rem;
+  }
+
+  .slideSubtitle {
+    font-size: 0.9rem;
+  }
+
+  .bannerTitle {
+    font-size: 1.25rem;
+  }
+
+  .bannerOverlay {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .categoryCardsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .heroCarousel {
+    height: 300px;
+  }
+}
